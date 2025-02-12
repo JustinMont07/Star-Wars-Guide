@@ -26,3 +26,10 @@ p.header {
   height: 200px;
   object-fit: cover;
 }
+.btn-primary {
+  --bs-btn-bg: #3f74ac;
+  --bs-btn-active-bg: #3f74ac;
+  --bs-btn-border-color: #38689c;
+  --bs-btn-hover-bg: #29507a;
+  --bs-btn-hover-border-color: #38689c;
+}

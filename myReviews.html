@@ -91,17 +91,16 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#modalForm"
-          >
-            Add a Review!
-          </button>
-        </div>
+      <div class="row justify-content-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalForm"
+          style="width: 7rem"
+        >
+          Add a Review!
+        </button>
       </div>
       <!-- Modal for form popup to add a review -->
       <div class="modal fade" id="modalForm" tabindex="-1">
@@ -131,6 +130,16 @@
                 <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
                   <input type="text" class="form-control" id="title" />
+                </div>
+                <div class="mb-3">
+                  <label for="rating" class="form-label">Rating</label>
+                  <select id="rating" class="form-select">
+                    <option>⭐</option>
+                    <option>⭐⭐</option>
+                    <option>⭐⭐⭐</option>
+                    <option>⭐⭐⭐⭐</option>
+                    <option>⭐⭐⭐⭐⭐</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                   <label for="review" class="form-label">Your Review</label>
@@ -163,7 +172,15 @@
         </div>
       </div>
       <!-- End of Modal-->
-      <div class="row justify-content-center" id="yourReviews"></div>
+      <div class="row justify-content-center" id="movieReviews">
+        <h2 class="reviewHeader londrina-shadow-regular blue">Movie Reviews</h2>
+      </div>
+      <div class="row justify-content-center" id="bookReviews">
+        <h2 class="reviewHeader londrina-shadow-regular red">Book Reviews</h2>
+      </div>
+      <div class="row justify-content-center" id="showReviews">
+        <h2 class="reviewHeader londrina-shadow-regular green">Show Reviews</h2>
+      </div>
     </div>
 
     <script>
@@ -173,13 +190,20 @@
           var mediaType = document.getElementById("mediaType").value;
           var title = document.getElementById("title").value;
           var review = document.getElementById("review").value;
+          var rating = document.getElementById("rating").value;
           var error = document.getElementById("error");
-          if (mediaType == "" || title == "" || review == "") {
+          if (mediaType == "" || title == "" || review == "" || rating == "") {
             error.innerHTML = "Please fill out all fields.";
           } else {
             error.innerHTML = "";
-            var yourReview = makeReviewCard(title, review);
-            document.getElementById("yourReviews").appendChild(yourReview);
+            var yourReview = makeReviewCard(title, review, rating);
+            if (mediaType == "Movie") {
+              document.getElementById("movieReviews").appendChild(yourReview);
+            } else if (mediaType == "Book") {
+              document.getElementById("bookReviews").appendChild(yourReview);
+            } else if (mediaType == "Show") {
+              document.getElementById("showReviews").appendChild(yourReview);
+            }
           }
         });
     </script>

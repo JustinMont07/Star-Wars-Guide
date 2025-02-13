@@ -41,7 +41,7 @@ function makeMovieCard(img, title, review) {
   return newCard;
 }
 
-function makeReviewCard(title, review) {
+function makeReviewCard(title, review, rating) {
   //Main Div
   var newDiv = document.createElement("div");
   newDiv.setAttribute("class", "col mb-4 d-flex justify-content-center");
@@ -49,19 +49,24 @@ function makeReviewCard(title, review) {
   var newCard = document.createElement("div");
   newCard.setAttribute("class", "card");
   newCard.setAttribute("style", "width: 18rem;");
+  //Card Header
+  var newCardTitle = document.createElement("div");
+  newCardTitle.setAttribute("class", "card-header");
+  newCardTitle.innerHTML = title;
   //Card body
   var newCardBody = document.createElement("div");
   newCardBody.setAttribute("class", "card-body");
   //Card title
-  var newCardTitle = document.createElement("h5");
-  newCardTitle.setAttribute("class", "card-title");
-  newCardTitle.innerHTML = title;
+  var newCardRating = document.createElement("h5");
+  newCardRating.setAttribute("class", "card-title");
+  newCardRating.innerHTML = rating;
   //Card text
   var newCardText = document.createElement("p");
   newCardText.setAttribute("class", "card-text");
   newCardText.innerHTML = review;
   //Append all the elements to the card
   newCardBody.appendChild(newCardTitle);
+  newCardBody.appendChild(newCardRating);
   newCardBody.appendChild(newCardText);
   newCard.appendChild(newCardBody);
   newDiv.appendChild(newCard);

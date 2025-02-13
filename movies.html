@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-bs-theme="dark">
+    <script src="functions.js"></script>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Star Wars Guide</a>
@@ -95,95 +97,35 @@
           </h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-        <!-- Best: Movie 1 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/The_Empire_Strikes_Back.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Empire Strikes Back"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode V - The Empire Strikes Back</h5>
-                <p class="card-text">
-                  The Empire Strikes Back is Star Wars at its finest. The Battle
-                  of Hoth, Yoda’s wisdom, and Vader’s shocking revelation
-                  elevate the saga. The darker tone, deeper characters, and
-                  Imperial March make it unforgettable. With stunning visuals
-                  and a powerful cliffhanger, it’s the ultimate sequel and one
-                  of the greatest sci-fi films ever made. Simply put, Empire is
-                  Star Wars perfection.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Best: Movie 2 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Rogue_One.png"
-                class="img-fluid rounded-start"
-                alt="The cover art for Rouge"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Rogue One: A Star Wars Story</h5>
-                <p class="card-text">
-                  Rogue One is the best Star Wars standalone film, delivering a
-                  gripping war story with real stakes. The film builds tension
-                  beautifully, leading to one of the saga’s greatest
-                  moments—Vader’s terrifying hallway scene. His raw power is
-                  unmatched, making the Rebel escape feel desperate. Stunning
-                  visuals, emotional sacrifices, and a perfect tie-in to A New
-                  Hope cement Rogue One as an essential Star Wars experience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Best: Movie 3 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Revenge_of_the_Sith.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Revenge of the Sith"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode III – Revenge of the Sith</h5>
-                <p class="card-text">
-                  Revenge of the Sith is a powerful culmination of the prequel
-                  trilogy, delivering unforgettable emotional weight. Anakin’s
-                  fall to darkness is tragic, and Hayden Christensen’s
-                  performance hits deep. The final duel with Obi-Wan is a
-                  stunning visual and emotional spectacle. The film’s intense
-                  atmosphere, combined with the heartbreaking downfall of the
-                  Jedi, cements it as the darkest, most impactful chapter of
-                  Star Wars, leaving a lasting impression.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
+      <div
+        class="row row-cols-1 row-cols-md-2 g-4 justify-content-center"
+        id="bestMovies"
+      >
+        <!-- Using the script to generate the cards for the best movies -->
+        <script>
+          var mainDiv = document.getElementById("bestMovies");
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/The_Empire_Strikes_Back.jpg",
+              "Episode V - The Empire Strikes Back",
+              "The Empire Strikes Back is Star Wars at its finest. The Battle of Hoth, Yoda’s wisdom, and Vader’s shocking revelation elevate the saga. The darker tone, deeper characters, and Imperial March make it unforgettable. With stunning visuals and a powerful cliffhanger, it’s the ultimate sequel and one of the greatest sci-fi films ever made. Simply put, Empire is Star Wars perfection."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Rogue_One.png",
+              "Rogue One: A Star Wars Story",
+              "Rogue One is the best Star Wars standalone film, delivering a gripping war story with real stakes. The film builds tension beautifully, leading to one of the saga’s greatest moments—Vader’s terrifying hallway scene. His raw power is unmatched, making the Rebel escape feel desperate. Stunning visuals, emotional sacrifices, and a perfect tie-in to A New Hope cement Rogue One as an essential Star Wars experience."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Revenge_of_the_Sith.jpg",
+              "Episode III – Revenge of the Sith",
+              "Revenge of the Sith is a powerful culmination of the prequel trilogy, delivering unforgettable emotional weight. Anakin’s fall to darkness is tragic, and Hayden Christensen’s performance hits deep. The final duel with Obi-Wan is a stunning visual and emotional spectacle. The film’s intense atmosphere, combined with the heartbreaking downfall of the Jedi, cements it as the darkest, most impactful chapter of Star Wars, leaving a lasting impression."
+            )
+          );
+        </script>
       </div>
       <!--End of Best-->
       <!--Great-->
@@ -194,97 +136,35 @@
           </h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-        <!-- Great: Movie 1 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/A_New_Hope.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for A New Hope"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode IV – A New Hope</h5>
-                <p class="card-text">
-                  A New Hope is the seminal film that launched the Star Wars
-                  saga, brilliantly setting up an epic trilogy with iconic
-                  characters and groundbreaking visuals. Its pioneering spirit
-                  and imaginative storytelling continue to inspire generations.
-                  However, the film’s dated effects and occasional rough edges
-                  can turn some modern viewers away. Despite these minor flaws,
-                  its enduring charm and revolutionary impact on cinema make A
-                  New Hope an essential cinematic milestone.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Great: Movie 2 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Star_Wars_The_Force_Awakens.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Force Awakens"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode VII – The Force Awakens</h5>
-                <p class="card-text">
-                  The Force Awakens powerfully revitalizes the saga with a
-                  renewed sense of hope, setting the stage perfectly for an
-                  exhilarating new trilogy. Poe's connection to the Force hints
-                  at his potential to become a Jedi, adding an exciting new
-                  layer to his character. Rey and BB-8 emerge as captivating
-                  characters with ample room to evolve! The film’s engaging
-                  narrative and dynamic visuals bridge the classic legacy with a
-                  promising future, making it a truly standout entry.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Great: Movie 3 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Return_of_the_Jedi.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Return of the Jedi"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode VI – Return of the Jedi</h5>
-                <p class="card-text">
-                  Return of the Jedi delivers a triumphant finale to the
-                  original trilogy, blending exhilarating action with emotional
-                  depth. The film masterfully wraps up the saga’s central
-                  conflicts while celebrating the heroic journey of its iconic
-                  characters. Its dynamic lightsaber battles, heartfelt
-                  resolutions, and stunning visuals bring closure. Return of the
-                  Jedi is a satisfying conclusion that honors the legacy of Star
-                  Wars, leaving fans with a lasting sense of wonder.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
+      <div
+        class="row row-cols-1 row-cols-md-2 g-4 justify-content-center"
+        id="greatMovies"
+      >
+        <!-- Using the script to generate the cards for the great movies -->
+        <script>
+          var mainDiv = document.getElementById("greatMovies");
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/A_New_Hope.jpg",
+              "Episode IV – A New Hope",
+              "A New Hope is the seminal film that launched the Star Wars saga, brilliantly setting up an epic trilogy with iconic characters and groundbreaking visuals. Its pioneering spirit and imaginative storytelling continue to inspire generations. However, the film’s dated effects and occasional rough edges can turn some modern viewers away. Despite these minor flaws, its enduring charm and revolutionary impact on cinema make A New Hope an essential cinematic milestone."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Star_Wars_The_Force_Awakens.jpg",
+              "Episode VII – The Force Awakens",
+              "The Force Awakens powerfully revitalizes the saga with a renewed sense of hope, setting the stage perfectly for an exhilarating new trilogy. Poe's connection to the Force hints at his potential to become a Jedi, adding an exciting new layer to his character. Rey and BB-8 emerge as captivating characters with ample room to evolve! The film’s engaging narrative and dynamic visuals bridge the classic legacy with a promising future, making it a truly standout entry."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Return_of_the_Jedi.jpg",
+              "Episode VI – Return of the Jedi",
+              "Return of the Jedi delivers a triumphant finale to the original trilogy, blending exhilarating action with emotional depth. The film masterfully wraps up the saga’s central conflicts while celebrating the heroic journey of its iconic characters. Its dynamic lightsaber battles, heartfelt resolutions, and stunning visuals bring closure. Return of the Jedi is a satisfying conclusion that honors the legacy of Star Wars, leaving fans with a lasting sense of wonder."
+            )
+          );
+        </script>
       </div>
       <!--End of Great-->
       <!--Good-->
@@ -295,128 +175,42 @@
           </h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-        <!-- Good: Movie 1 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Attack_of_the_Clones.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for the Attack of the Clones"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode II – Attack of the Clones</h5>
-                <p class="card-text">
-                  Attack of the Clones dazzles with epic visuals, especially
-                  during the electrifying Battle of Geonosis. The expansive war
-                  scenes and dynamic lightsaber duels showcase the franchise’s
-                  visual brilliance. However, the film’s writing falls short,
-                  with clunky dialogue that occasionally undermines its moments.
-                  Despite these shortcomings, Attack of the Clones remains a
-                  memorable entry for its spectacular action and innovative
-                  effects, proving that its visuals can sometimes outshine its
-                  narrative flaws.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Good: Movie 2 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/The_Clone_Wars.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Clone Wars movie"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">The Clone Wars</h5>
-                <p class="card-text">
-                  Star Wars: The Clone Wars animated movie offers a refreshing
-                  animated take on the epic conflict, serving as a solid entry
-                  in the saga. The film introduces Ahsoka Tano, a character who,
-                  despite initial mixed reactions, ultimately becomes one of
-                  Star Wars' most beloved figures. With engaging action
-                  sequences and a unique narrative, this film expands the
-                  prequel era with fun, dynamic storytelling that holds its own
-                  among its peers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Good: Movie 3 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Solo.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for Solo: A Star Wars Story"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Solo: A Star Wars Story</h5>
-                <p class="card-text">
-                  Solo: A Star Wars Story is an enjoyable addition to the saga,
-                  offering a fresh look at Han Solo’s origins. Its adventurous
-                  spirit and charismatic characters provide plenty of fun, yet
-                  it doesn’t quite capture the gritty, groundbreaking feel of
-                  Rogue One. While it may not stand out as a defining entry,
-                  Solo still delivers a solid, entertaining journey into the
-                  backstory of a beloved rogue, making it a pleasant watch for
-                  fans.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Good: Movie 4 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/Phantom_Menace.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Phantom Menace"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode I – The Phantom Menace</h5>
-                <p class="card-text">
-                  Phantom Menace stands as the worst installment of the prequel
-                  trilogy, featuring a forgettable narrative and underdeveloped
-                  characters that largely fail to resonate with modern
-                  audiences. However, the film’s breathtaking "Duel of the
-                  Fates" sequence electrifies the screen, delivering a dazzling
-                  display of lightsaber combat and raw emotion. Despite its many
-                  flaws, this singular standout moment offers a glimpse of the
-                  true magic Star Wars is capable of achieving, undeniably.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
+      <div
+        class="row row-cols-1 row-cols-md-2 g-4 justify-content-center"
+        id="goodMovies"
+      >
+        <!-- Using the script to generate the cards for the good movies -->
+        <script>
+          var mainDiv = document.getElementById("goodMovies");
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Attack_of_the_Clones.jpg",
+              "Episode II – Attack of the Clones",
+              "Attack of the Clones dazzles with epic visuals, especially during the electrifying Battle of Geonosis. The expansive war scenes and dynamic lightsaber duels showcase the franchise’s visual brilliance. However, the film’s writing falls short, with clunky dialogue that occasionally undermines its moments. Despite these shortcomings, Attack of the Clones remains a memorable entry for its spectacular action and innovative effects, proving that its visuals can sometimes outshine its narrative flaws."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/The_Clone_Wars.jpg",
+              "The Clone Wars",
+              "Star Wars: The Clone Wars animated movie offers a refreshing animated take on the epic conflict, serving as a solid entry in the saga. The film introduces Ahsoka Tano, a character who, despite initial mixed reactions, ultimately becomes one of Star Wars' most beloved figures. With engaging action sequences and a unique narrative, this film expands the prequel era with fun, dynamic storytelling that holds its own among its peers."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Solo.jpg",
+              "Solo: A Star Wars Story",
+              "Solo: A Star Wars Story is an enjoyable addition to the saga, offering a fresh look at Han Solo’s origins. Its adventurous spirit and charismatic characters provide plenty of fun, yet it doesn’t quite capture the gritty, groundbreaking feel of Rogue One. While it may not stand out as a defining entry, Solo still delivers a solid, entertaining journey into the backstory of a beloved rogue, making it a pleasant watch for fans."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/Phantom_Menace.jpg",
+              "Episode I – The Phantom Menace",
+              "Phantom Menace stands as the worst installment of the prequel trilogy, featuring a forgettable narrative and underdeveloped characters that largely fail to resonate with modern audiences. However, the film’s breathtaking 'Duel of the Fates' sequence electrifies the screen, delivering a dazzling display of lightsaber combat and raw emotion. Despite its many flaws, this singular standout moment offers a glimpse of the true magic Star Wars is capable of achieving, undeniably."
+            )
+          );
+        </script>
       </div>
       <!--End of Good-->
       <!--Bad-->
@@ -427,67 +221,27 @@
           </h2>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-        <!-- Bad: Movie 1 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/The_Last_Jedi.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Last Jedi"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode VIII – The Last Jedi</h5>
-                <p class="card-text">
-                  The Last Jedi is a highly divisive installment that feels
-                  disconnected from its predecessor, The Force Awakens. It
-                  disregards key plot points and character arcs, leading to a
-                  narrative that feels inconsistent, disjointed, and ultimately
-                  unsatisfying. While visually stunning, the film's disregard
-                  for the setup from the previous movie leaves fans questioning
-                  its place in the saga. As a result, it stands as the weakest
-                  and most disappointing film in the galaxy.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
-        <!-- Bad: Movie 2 -->
-        <div class="card mb-4" style="max-width: 540px">
-          <div class="row g-0">
-            <div
-              class="col-md-4 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="Images/The_Rise_of_Skywalker.jpg"
-                class="img-fluid rounded-start"
-                alt="The cover art for The Rise of Skywalker"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Episode IX – The Rise of Skywalker</h5>
-                <p class="card-text">
-                  The Rise of Skywalker disregards the narrative set by its
-                  predecessors, opting for fan service over coherent
-                  storytelling. Palpatine’s return feels forced, undermining the
-                  saga’s lore. The film’s reliance on spectacle and nostalgia
-                  detracts from character development, making the conclusion
-                  disjointed and unsatisfying. It ends up as the most
-                  disappointing film in the saga, failing to provide a
-                  fulfilling end to the trilogy.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of card-->
+      <div
+        class="row row-cols-1 row-cols-md-2 g-4 justify-content-center"
+        id="badMovies"
+      >
+        <script>
+          var mainDiv = document.getElementById("badMovies");
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/The_Last_Jedi.jpg",
+              "Episode VIII – The Last Jedi",
+              "The Last Jedi is a highly divisive installment that feels disconnected from its predecessor, The Force Awakens. It disregards key plot points and character arcs, leading to a narrative that feels inconsistent, disjointed, and ultimately unsatisfying. While visually stunning, the film's disregard for the setup from the previous movie leaves fans questioning its place in the saga. As a result, it stands as the weakest and most disappointing film in the galaxy."
+            )
+          );
+          mainDiv.appendChild(
+            makeMovieCard(
+              "Images/The_Rise_of_Skywalker.jpg",
+              "Episode IX – The Rise of Skywalker",
+              "The Rise of Skywalker disregards the narrative set by its predecessors, opting for fan service over coherent storytelling. Palpatine’s return feels forced, undermining the saga’s lore. The film’s reliance on spectacle and nostalgia detracts from character development, making the conclusion disjointed and unsatisfying. It ends up as the most disappointing film in the saga, failing to provide a fulfilling end to the trilogy."
+            )
+          );
+        </script>
       </div>
       <!--End of Bad-->
     </div>

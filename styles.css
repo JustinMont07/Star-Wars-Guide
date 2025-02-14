@@ -62,3 +62,11 @@ p.header {
   text-align: center;
   text-decoration: underline;
 }
+
+#dropdown-items {
+  display: none;
+}
+
+#dropdown-button:hover #dropdown-items {
+  display: block;
+}

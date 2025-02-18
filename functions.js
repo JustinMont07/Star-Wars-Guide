@@ -217,7 +217,7 @@ function getGuide(order, detail) {
       h.innerHTML = "Release Order - In-Depth";
       h.setAttribute("class", "subheader londrina-shadow-regular green");
       p.innerHTML =
-        "This order follows the films, shows and some books as they were released. While it offers historical context, it can feel disjointed and harder to follow, with key story elements revealed out of order. I don’t recommend this for a smooth viewing experience.";
+        "This order follows the films, shows and some books as they were released. While it offers historical context, it can feel disjointed and harder to follow, with key story elements revealed out of order. <span class='badge text-bg-danger'>I don’t recommend this for a smooth viewing experience</span>";
     }
   } else if (order == "2") {
     if (detail == "1") {

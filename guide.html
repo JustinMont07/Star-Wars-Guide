@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="functions.js"></script>
   </head>
   <body data-bs-theme="dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -53,15 +54,8 @@
             <li class="nav-item">
               <a class="nav-link" href="myReviews.html">Your Reviews</a>
             </li>
-            <li class="nav-item" id="dropdown-button">
-              <a class="nav-link dropdown-toggle" href="guide.html"
-                >Beginner Guide</a
-              >
-              <ul class="dropdown-menu" id="dropdown-items">
-                <li><a class="dropdown-item" href="guide.html">Basics</a></li>
-                <li><a class="dropdown-item" href="guide.html">In Depth</a></li>
-                <li><a class="dropdown-item" href="guide.html">Nerd</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="guide.html">Beginner Guide</a>
             </li>
           </ul>
         </div>
@@ -78,6 +72,66 @@
           </p>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <form class="row g-3 justify-content-center">
+            <div class="col-auto">
+              <select id="viewOrder" class="form-select">
+                <option value="0" selected>
+                  Choose how you want to view the series...
+                </option>
+                <option value="1">Release Order</option>
+                <option value="2">Chronological Order</option>
+                <option value="3">Machete Order</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <select id="viewType" class="form-select">
+                <option value="0" selected>
+                  Choose how in depth you want to go...
+                </option>
+                <option value="1">
+                  The Basics (Just the movies and some shows)
+                </option>
+                <option value="2">
+                  In Depth (Includes Important books and shows)
+                </option>
+                <option value="3">Nerd (Everything)</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <button
+                type="submit"
+                class="btn btn-primary mb-3"
+                id="confirmButton"
+              >
+                Get your guide
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="guide"></div>
+      </div>
     </div>
+    <script>
+      document
+        .getElementById("confirmButton")
+        .addEventListener("click", function () {
+          event.preventDefault();
+          var order = document.getElementById("viewOrder").value;
+          var type = document.getElementById("viewType").value;
+          console.log("order: " + order + " type: " + type);
+          var container = document.getElementById("guide");
+          container.innerHTML = "";
+          if (order != "3" && (order == "0" || type == "0")) {
+            alert("Please select an option for both fields.");
+          } else {
+            var guide = getGuide(order, type);
+            container.appendChild(guide);
+          }
+        });
+    </script>
   </body>
 </html>

@@ -14,6 +14,7 @@ body {
   text-align: center;
   text-shadow: 2px 2px 5px black;
 }
+
 p.header {
   font-size: 125%;
 }
@@ -36,6 +37,10 @@ p.header {
 .subheader {
   text-shadow: 2px 2px 10px black;
   text-decoration: underline;
+}
+
+.description {
+  font-size: 110%;
 }
 
 .card {
@@ -63,10 +68,6 @@ p.header {
   text-decoration: underline;
 }
 
-#dropdown-items {
-  display: none;
-}
-
-#dropdown-button:hover #dropdown-items {
-  display: block;
+.list-group-item {
+  background-color: transparent;
 }

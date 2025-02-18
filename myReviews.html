@@ -112,7 +112,7 @@
             <div class="modal-body">
               <span id="error" class="text-danger"></span>
               <!-- The Form-->
-              <form>
+              <form id="reviewForm">
                 <div class="mb-3">
                   <label for="mediaType" class="form-label">Media Type</label>
                   <select id="mediaType" class="form-select">
@@ -153,12 +153,7 @@
               >
                 Close
               </button>
-              <button
-                type="button"
-                id="insert_button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" id="insert_button" class="btn btn-primary">
                 Submit
               </button>
             </div>
@@ -190,6 +185,12 @@
             error.innerHTML = "Please fill out all fields.";
           } else {
             error.innerHTML = "";
+            document.getElementById("reviewForm").reset();
+            // Hide the modal
+            var modal = bootstrap.Modal.getInstance(
+              document.getElementById("modalForm")
+            );
+            modal.hide();
             var yourReview = makeReviewCard(title, review, rating);
             if (mediaType == "Movie") {
               document.getElementById("movieReviews").appendChild(yourReview);
